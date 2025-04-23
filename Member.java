@@ -66,4 +66,8 @@ class Member {
     public boolean isLanggananBuletin() {
         return langgananBuletin;
     }
+
+    public void setLanggananBuletin(boolean langgananBuletin) {
+        this.langgananBuletin = langgananBuletin;
+    }
 }

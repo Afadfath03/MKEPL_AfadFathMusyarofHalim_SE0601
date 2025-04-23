@@ -31,9 +31,13 @@ public class LibraryMember {
     }
 
     public void langgananBuletinPerpustakaan() {
+        membershipInfo.setLanggananBuletin(true);
     }
 
     public void gunakanKodeReferal(String kode) {
+        if (kode.equals(membershipInfo.getKodeReferal())) {
+            return; // Kode referal valid
+        }
     }
 
     public boolean periksaKelayakanUpgrade() {

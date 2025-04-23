@@ -30,27 +30,35 @@ public class LibraryMember {
         System.out.println("===========================");
     }
 
+    public void langgananBuletinPerpustakaan() {
+    }
+
+    public void gunakanKodeReferal(String kode) {
+    }
+
     public boolean periksaKelayakanUpgrade() {
         return membershipInfo.getTingkatKeanggotaan().equals("DASAR") && membershipInfo.getPoinLoyalitas() > 100;
     }
 
     public double hitungSkorRisiko() {
+        final double DENDA_TERLAMBAT= 1.5;
+        final double DENDA_JUMLAH = 0.1;
+        final double DENDA_NONAKTIF = 5.0;
+        final double DENDA_MEMBER_BASIC = 2.0;
+        final double BONUS_BUKU_LEBIH = 1.5;
+        final int DENDA_JUMLAH_PINJAM_BUKU = 50;
+    
         double skor = 0;
-        skor += membershipInfo.getJumlahTerlambat() * 1.5;
-        skor += membershipInfo.getJumlahDenda() * 0.1;
+        skor += membershipInfo.getJumlahTerlambat() * DENDA_TERLAMBAT;
+        skor += membershipInfo.getJumlahDenda() * DENDA_JUMLAH;
+        
         if (!membershipInfo.isStatusAktif())
-            skor += 5;
+            skor += DENDA_NONAKTIF;
         if (membershipInfo.getTingkatKeanggotaan().equals("DASAR"))
-            skor += 2;
-        if (membershipInfo.getJumlahBukuDipinjam() > 50)
-            skor -= 1.5;
+            skor += DENDA_MEMBER_BASIC;
+        if (membershipInfo.getJumlahBukuDipinjam() > DENDA_JUMLAH_PINJAM_BUKU)
+            skor -= BONUS_BUKU_LEBIH;
         return skor;
-    }
-
-    public void langgananBuletinPerpustakaan() {
-    }
-
-    public void gunakanKodeReferal(String kode) {
     }
 }
 

@@ -24,7 +24,7 @@ public class LibraryMember {
         System.out.println("Denda        : Rp " + membershipInfo.getJumlahDenda());
         System.out.println("Poin         : " + membershipInfo.getPoinLoyalitas());
         System.out.println("Kode Referal : " + membershipInfo.getKodeReferal());
-        System.out.println("Langganan Buletin: " + membershipInfo.isLanggananBuletin());
+        System.out.println("Langganan Buletin: " + membershipInfo.getLanggananBuletin());
         System.out.println("Skor Risiko : " + hitungSkorRisiko());
         System.out.println("Layak Upgrade?: " + periksaKelayakanUpgrade());
         System.out.println("===========================");

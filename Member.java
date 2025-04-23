@@ -35,39 +35,63 @@ class Member {
         return tanggalGabung;
     }
 
-    public boolean isStatusAktif() {
-        return statusAktif;
+    public int getPoinLoyalitas() {
+        return poinLoyalitas;
     }
 
     public String getTingkatKeanggotaan() {
         return tingkatKeanggotaan;
+    }
+    
+    public void setTingkatKeanggotaan(String t) {
+        tingkatKeanggotaan = t;
     }
 
     public int getJumlahBukuDipinjam() {
         return jumlahBukuDipinjam;
     }
 
+    public void setJumlahBukuDipinjam(int b) {
+        jumlahBukuDipinjam = b;
+    }
+
     public int getJumlahTerlambat() {
         return jumlahTerlambat;
+    }
+
+    public void setJumlahTerlambat(int t) {
+        jumlahTerlambat = t;
     }
 
     public int getJumlahDenda() {
         return jumlahDenda;
     }
 
-    public int getPoinLoyalitas() {
-        return poinLoyalitas;
+    public void setJumlahDenda(int d) {
+        jumlahDenda = d;
     }
 
     public String getKodeReferal() {
         return kodeReferal;
     }
 
-    public boolean isLanggananBuletin() {
+    public void setKodeReferal(String k) {
+        kodeReferal = k;
+    }
+
+    public boolean getLanggananBuletin() {
         return langgananBuletin;
     }
 
-    public void setLanggananBuletin(boolean langgananBuletin) {
-        this.langgananBuletin = langgananBuletin;
+    public void setLanggananBuletin(boolean l) {
+        langgananBuletin = l;
+    }
+
+    public void setPoinLoyalitas(int poinLoyalitas) {
+        this.poinLoyalitas = poinLoyalitas;
+    }
+
+    public boolean isStatusAktif() {
+        return statusAktif;
     }
 }

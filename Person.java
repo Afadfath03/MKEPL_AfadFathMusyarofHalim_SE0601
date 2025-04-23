@@ -3,9 +3,9 @@ class Person {
     private String alamat;
     private String nomorTelepon;
     private String email;
-    private String jenisKelamin;
+    private Gender jenisKelamin;
 
-    public Person(String namaLengkap, String alamat, String nomorTelepon, String email, String jenisKelamin) {
+    public Person(String namaLengkap, String alamat, String nomorTelepon, String email, Gender jenisKelamin) {
         this.namaLengkap = namaLengkap;
         this.alamat = alamat;
         this.nomorTelepon = nomorTelepon;
@@ -29,7 +29,11 @@ class Person {
         return email;
     }
 
-    public String getJenisKelamin() {
+    public Gender getJenisKelamin() {
         return jenisKelamin;
+    }
+
+    public enum Gender {
+        LAKI_LAKI, PEREMPUAN
     }
 }
